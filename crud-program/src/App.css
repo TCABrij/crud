@@ -1,0 +1,23 @@
+.proj-title{
+    /* background-color: #00b894; */
+    background-color: #00cec9;
+    padding: 1rem;
+    font-size: large;
+    font-weight: 600;
+    color: white;
+}
+
+.clickable{
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all .3s;
+}
+.clickable:first-child{
+    margin-right: 8px;
+}
+.clickable:first-child:hover{
+    color: green;
+}
+.clickable:nth-child(2):hover{
+    color: red;
+}
