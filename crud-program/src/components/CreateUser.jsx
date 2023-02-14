@@ -13,12 +13,18 @@ function CreateUser() {
     })
 
     async function addUser() {
-        console.log(user)
         await axios.post('http://localhost:3000/users', {
             name: user.name,
             age: user.age,
             course: user.course,
             city: user.city
+        })
+        // console.log(user)
+        alert("User Added")
+
+        // Redirect to Home Page
+        setTimeout(()=>{
+            document.location.href = "/"
         })
     }
 
