@@ -21,3 +21,15 @@
 .clickable:nth-child(2):hover{
     color: red;
 }
+
+.links{
+    text-decoration: none!important;
+}
+
+.form-container{
+    /* width: 50vw; */
+    max-width: 60vw;
+    margin-inline: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}

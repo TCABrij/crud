@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
-import {AiFillDelete, AiFillEdit} from 'react-icons/ai'
+import { AiFillDelete, AiFillEdit } from 'react-icons/ai'
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -10,6 +10,13 @@ function Users() {
     let data = await axios.get("http://localhost:3000/users");
     let users = data.data;
     setUsers(users);
+  }
+
+   function deleteUser(id) {
+      fetch("http://localhost:3000/users/" + id, {
+        method: "DELETE"
+      })
+    getUsers()
   }
 
   useEffect(() => {
@@ -30,7 +37,7 @@ function Users() {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => {
+          {users? users.map((user) => {
             return (
               <>
                 <tr>
@@ -40,13 +47,13 @@ function Users() {
                   <td>{user.course}</td>
                   <td>{user.city}</td>
                   <td>
-                    <AiFillEdit className="clickable"/>
-                    <AiFillDelete className="clickable"/>
+                    <span onClick={() => { deleteUser(user.id) }}><AiFillEdit className="clickable" /></span>
+                    <span onClick={() => { deleteUser(user.id) }}><AiFillDelete className="clickable" /></span>
                   </td>
                 </tr>
               </>
             );
-          })}
+          }) : <tr>No DATA</tr>}
         </tbody>
       </Table>
     </>
