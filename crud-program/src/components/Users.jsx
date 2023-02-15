@@ -37,11 +37,11 @@ function Users() {
           </tr>
         </thead>
         <tbody>
-          {users ? users.map((user) => {
+          {users ? users.map((user, index) => {
             return (
               <>
                 <tr key={user.id}>
-                  <td>{user.id}</td>
+                  <td>{index+1}</td>
                   <td>{user.name}</td>
                   <td>{user.age}</td>
                   <td>{user.course}</td>

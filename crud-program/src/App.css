@@ -35,3 +35,16 @@
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
+
+#search{
+    padding: 8px 0px;
+    padding-left: 8px;
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: white;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+#search:has(:active, :focus){
+    outline: 1px solid grey;
+}

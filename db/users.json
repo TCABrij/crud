@@ -1,3 +1,39 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": "Shivam",
+      "age": "20",
+      "course": "BCA",
+      "city": "Allahabad",
+      "id": 1
+    },
+    {
+      "name": "Sameer",
+      "age": "20",
+      "course": "BCA",
+      "city": "Chunar",
+      "id": 3
+    },
+    {
+      "name": "Nitesh",
+      "age": "22",
+      "course": "BCA",
+      "city": "Doosara Gola",
+      "id": 4
+    },
+    {
+      "name": "Anand",
+      "age": "Kam hai",
+      "course": "MCA",
+      "city": "Prayagraj",
+      "id": 5
+    },
+    {
+      "name": "Satyam Nibba",
+      "age": "20",
+      "course": "M.Tech",
+      "city": "Doosara gola",
+      "id": 6
+    }
+  ]
 }
