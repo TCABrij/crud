@@ -12,10 +12,10 @@ function Users() {
     setUsers(users);
   }
 
-   function deleteUser(id) {
-      fetch("http://localhost:3000/users/" + id, {
-        method: "DELETE"
-      })
+  function deleteUser(id) {
+    fetch("http://localhost:3000/users/" + id, {
+      method: "DELETE"
+    })
     getUsers()
   }
 
@@ -37,18 +37,18 @@ function Users() {
           </tr>
         </thead>
         <tbody>
-          {users? users.map((user) => {
+          {users ? users.map((user) => {
             return (
               <>
-                <tr>
+                <tr key={user.id}>
                   <td>{user.id}</td>
                   <td>{user.name}</td>
                   <td>{user.age}</td>
                   <td>{user.course}</td>
                   <td>{user.city}</td>
                   <td>
-                    <span onClick={() => { deleteUser(user.id) }}><AiFillEdit className="clickable" /></span>
-                    <span onClick={() => { deleteUser(user.id) }}><AiFillDelete className="clickable" /></span>
+                    <span className="action-btns" onClick={() => { }}><AiFillEdit className="clickable"/></span>
+                    <span className="action-btns" onClick={() => { deleteUser(user.id) }}><AiFillDelete className="clickable" /></span>
                   </td>
                 </tr>
               </>

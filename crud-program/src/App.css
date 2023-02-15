@@ -7,23 +7,25 @@
     color: white;
 }
 
+.action-btns{
+    color: green;
+}
+.action-btns:last-child{
+    color: rgb(219, 33, 0);
+}
+
 .clickable{
     cursor: pointer;
     font-size: 1.2rem;
     transition: all .3s;
 }
 .clickable:first-child{
-    margin-right: 8px;
-}
-.clickable:first-child:hover{
-    color: green;
-}
-.clickable:nth-child(2):hover{
-    color: red;
+    margin-right: 18px;
 }
 
 .links{
-    text-decoration: none!important;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 .form-container{

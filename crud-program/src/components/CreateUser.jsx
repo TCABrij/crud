@@ -4,12 +4,14 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import "../App.css"
 
+
 function CreateUser() {
+
     const [user, setUser] = useState({
-        name: null,
-        age: null,
-        course: null,
-        city: null
+        name: '',
+        age: '',
+        course: '',
+        city: ''
     })
 
     async function addUser() {
@@ -23,29 +25,68 @@ function CreateUser() {
         alert("User Added")
 
         // Redirect to Home Page
-        setTimeout(()=>{
+        setTimeout(() => {
             document.location.href = "/"
         })
     }
 
+    function setData(e) {
+        const currentInput = e.target.id;
+        const value = e.target.value;
+
+        setUser(preData => {
+            if( currentInput === "name"){
+                return { 
+                    name: value,
+                    age: preData.age,
+                    course: preData.course,
+                    city: preData.city
+                 }
+            }
+            else if( currentInput === "age"){
+                return { 
+                    age: value,
+                    name: preData.name,
+                    course: preData.course,
+                    city: preData.city
+                 }
+            }
+            else if( currentInput === "course"){
+                return { 
+                    course: value,
+                    age: preData.age,
+                    name: preData.name,
+                    city: preData.city
+                 }
+            }
+            else{
+                return { 
+                    city: value,
+                    age: preData.age,
+                    course: preData.course,
+                    name: preData.name
+                 }
+            }
+        })
+    }
     return (
         <div className="form-container">
             <Form onSubmit={(e) => e.preventDefault()}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email Name</Form.Label>
-                    <Form.Control type="text" required onChange={(e) => { setUser({ name: e.target.value }) }} />
+                <Form.Group className="mb-3" controlId="name">
+                    <Form.Label>Enter Name</Form.Label>
+                    <Form.Control type="text" required onChange={setData}  />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email Age</Form.Label>
-                    <Form.Control type="text" required onChange={(e) => { setUser({ age: e.target.value }) }} />
+                <Form.Group className="mb-3" controlId="age">
+                    <Form.Label>Enter Age</Form.Label>
+                    <Form.Control type="text" required onChange={setData} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email Course</Form.Label>
-                    <Form.Control type="text" required onChange={(e) => { setUser({ course: e.target.value }) }} />
+                <Form.Group className="mb-3" controlId="course">
+                    <Form.Label>Enter Course</Form.Label>
+                    <Form.Control type="text" required onChange={setData} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email City</Form.Label>
-                    <Form.Control type="text" required onChange={(e) => { setUser({ city: e.target.value }) }} />
+                <Form.Group className="mb-3" controlId="city">
+                    <Form.Label>Enter City</Form.Label>
+                    <Form.Control type="text" required onChange={setData} />
                 </Form.Group>
                 <Button variant="primary" type="submit" onClick={addUser}>
                     Add User

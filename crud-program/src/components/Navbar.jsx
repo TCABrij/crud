@@ -12,8 +12,8 @@ function Filter_list() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className='nav=links'><Link to="/">All Users</Link></Nav.Link>
-            <Nav.Link href="#link" className='nav-links'><Link to="/create">Create User</Link></Nav.Link>
+            <Nav.Link ><Link to="/" className='links'>All Users</Link></Nav.Link>
+            <Nav.Link ><Link to="/create" className='links' >Create User</Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

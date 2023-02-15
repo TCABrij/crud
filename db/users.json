@@ -1,32 +1,3 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "Sameer",
-      "age": 20,
-      "course": "BCA",
-      "city": "mirzapur"
-    },
-    {
-      "id": 2,
-      "name": "Shivam",
-      "age": 21,
-      "course": "BCA",
-      "city": "prayagraj"
-    },
-    {
-      "id": 4,
-      "name": "Brij Kishor",
-      "age": 25,
-      "course": "BCA",
-      "city": "prayagraj"
-    },
-    {
-      "id": 5,
-      "name": "Nitesh",
-      "age": 22,
-      "course": "MBBS",
-      "city": "Gorakhpur"
-    }
-  ]
+  "users": []
 }
